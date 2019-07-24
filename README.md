@@ -8,5 +8,7 @@ It's better if you put the confirm file on your bin folder, to be executable eve
 git clone https://github.com/lucasvmiguel/confirm.git
 cd confirm
 chmod +x confirm
+
 ./confirm && echo 'in case yes write this on the bash'
+./confirm -y && echo 'it's gonna print without the question'
 ```
