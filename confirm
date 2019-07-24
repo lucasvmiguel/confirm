@@ -1,8 +1,12 @@
+if [ "$1" == "-y" ]; then
+    exit 0
+fi
+
 while true; do
-    read -p "Do you want to continue? (y|n)" yn
+    read -p "Do you want to continue? (y|n) " yn
     case $yn in
-        [Yy]* ) exit 0;;
-        [Nn]* ) exit 1;;
-        * ) echo "Please answer yes or no.";;
+        [y]* ) exit 0;;
+        [n]* ) exit 1;;
+        * ) echo "\nPlease answer 'y' for yes or 'n' for no.\n";;
     esac
 done
